@@ -1,0 +1,21 @@
+{
+	"name": "sql_server_proj_1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost\\SQLEXPRESS",
+			"database": "VISION_BOARD_PROJECT_1",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "rahul_admin",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwYzlhZGNhZS1jZmY4LTQyZDYtOTdiZC0xMDAyMjY3MDY0NzEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeProj1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
