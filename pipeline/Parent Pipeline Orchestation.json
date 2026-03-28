@@ -33,7 +33,14 @@
 			{
 				"name": "ForEachSqlTable",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "LKUP_SQLTABLE_WATERMARK_DW",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
