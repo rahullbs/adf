@@ -1,0 +1,24 @@
+{
+	"name": "LS_ONPrem_SQL_Server_DW",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "LAPTOP-QRL7FSQN\\SQLEXPRESS",
+			"database": "VISION_BOARD_PROJECT_1",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "rahul_admin",
+			"alwaysEncryptedSettings": {
+				"alwaysEncryptedAkvAuthType": "ManagedIdentity"
+			},
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0MDk5NjdhZC02ZDhlLTQ5NDEtYjBjMC1hMGQ1MmY4NjhjYmYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeProj1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
