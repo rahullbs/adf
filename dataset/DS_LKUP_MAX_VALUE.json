@@ -2,7 +2,7 @@
 	"name": "DS_LKUP_MAX_VALUE",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "sql_server_proj_1",
+			"referenceName": "LS_Parent_SQLserver_Dw",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -37,8 +37,14 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "dbo",
-			"table": "ADF_Watermark_Table"
+			"schema": {
+				"value": "@dataset().schemaname",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
 		}
 	}
 }
