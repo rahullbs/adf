@@ -37,7 +37,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('LKUP_SQLTABLE_WATERMRK_DW').output.value",
+						"value": "@activity('LKUP_SQLTABLE_WATERMARK_DW').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -56,10 +56,22 @@
 								},
 								"waitOnCompletion": true,
 								"parameters": {
-									"TableSchema": "@item().TableSchema",
-									"TableName": "@item().TableName",
-									"WatermarkColumn": "@item().WatermarkColumn",
-									"LastLoadValue": "@item().LastLoadValue"
+									"TableSchema": {
+										"value": "@item().TableSchema",
+										"type": "Expression"
+									},
+									"TableName": {
+										"value": "@item().TableName",
+										"type": "Expression"
+									},
+									"WatermarkColumn": {
+										"value": "@item().WatermarkColumn",
+										"type": "Expression"
+									},
+									"LastLoadValue": {
+										"value": "@item().LastLoadValue",
+										"type": "Expression"
+									}
 								}
 							}
 						}
