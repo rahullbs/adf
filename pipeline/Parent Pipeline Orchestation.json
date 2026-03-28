@@ -37,7 +37,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('LKUP_SQLTABLE_WATRMRK_DW').output.value",
+						"value": "@activity('LKUP_SQLTABLE_WATERMRK_DW').output.value",
 						"type": "Expression"
 					},
 					"activities": [
