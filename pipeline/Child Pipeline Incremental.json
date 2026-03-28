@@ -37,8 +37,11 @@
 						"referenceName": "DS_LKUP_MAX_VALUE",
 						"type": "DatasetReference",
 						"parameters": {
-							"schemaname": "@pipeline().parameters.TableSchema",
-							"tablename": "@pipeline().parameters.TableName"
+							"tablename": "@pipeline().parameters.TableName",
+							"schemaname": {
+								"value": "@pipeline().parameters.TableSchema",
+								"type": "Expression"
+							}
 						}
 					},
 					"firstRowOnly": true
@@ -108,7 +111,6 @@
 									"referenceName": "DS_LKUP_MAX_VALUE",
 									"type": "DatasetReference",
 									"parameters": {
-										"schemaname": "@pipeline().parameters.TableSchema",
 										"tablename": "@pipeline().parameters.TableName"
 									}
 								}

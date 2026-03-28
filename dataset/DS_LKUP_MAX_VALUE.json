@@ -6,13 +6,11 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"schemaname": {
-				"type": "string",
-				"defaultValue": "@pipeline().parameters.TableSchema"
-			},
 			"tablename": {
-				"type": "string",
-				"defaultValue": "@pipeline().parameters.TableName"
+				"type": "string"
+			},
+			"schemaname": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
