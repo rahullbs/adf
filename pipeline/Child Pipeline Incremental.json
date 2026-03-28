@@ -111,7 +111,11 @@
 									"referenceName": "DS_LKUP_MAX_VALUE",
 									"type": "DatasetReference",
 									"parameters": {
-										"tablename": "@pipeline().parameters.TableName"
+										"tablename": "@pipeline().parameters.TableName",
+										"schemaname": {
+											"value": "@pipeline().parameters.TableSchema",
+											"type": "Expression"
+										}
 									}
 								}
 							],
@@ -154,10 +158,12 @@
 		],
 		"parameters": {
 			"TableSchema": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@pipeline().parameters.TableSchema"
 			},
 			"TableName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@pipeline().parameters.TableName"
 			},
 			"WatermarkColumn": {
 				"type": "string"
